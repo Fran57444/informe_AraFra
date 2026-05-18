@@ -2,10 +2,12 @@
 
 # Internacional
 - Derecho internacional Publico y el Principio de Soberania
+
 Prohibe la intervención en los asuntos internos de otros Estados
 Los atacantes vinculados a un gobierno extranjero accedieron ilegalmente a la infraestructura tecnologica gubernamental de otro pais.
 
 - Convenio de Budapest
+
 Articulo 2: Acceso ílícito
 Los atacantes superaron las medidas de seguridad para meterse en las redes de SolarWinds y en los sistemas de sus miles de clientes.
 
@@ -17,6 +19,7 @@ Los atacantes comprometieron el funcionamiento y la seguridad de las redes globa
 
 # Nacional Chileno
 - Ley 21.459
+
 Articulo 1: Ataque a la integridad de un sistema informatico
 Los atacantes alteraron el funcionamiento normal de las redes al inyectar codigo espia.
 
@@ -39,10 +42,12 @@ Articulo 10: Circunstancias agravantes
 
 
 - Ley 21.663
+
 Regula obligaciones de ciberseguridad. Crea la agencia ANCI.
 Las empresas afectadas habrian infringido el deber de reportar el incidente al CSIRT de la ANCI dentro del plazo legal estricto de pocas horas tras su deteccion.
 
 - Ley 19.628
+
 Protege el correcto tratamiento de los datos personales y la privacidad de las personas en Chile.
 Los atacantes vulneraron la privacidad de los usuarios debido a un tratamiento y exposición masiva de sus datos personales sin mediar autorización legal ni consentimiento de los titulares.
 
