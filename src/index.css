@@ -3,18 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
+  --text: #cbd5e1;
+  --text-h: #f8fafc;
+  --bg: #020617;
+  --border: #334155;
+  --code-bg: #0f172a;
+  --accent: #38bdf8;
+  --accent-bg: rgba(56, 189, 248, 0.12);
+  --accent-border: rgba(56, 189, 248, 0.5);
+  --social-bg: rgba(15, 23, 42, 0.75);
+  --shadow: rgba(0, 0, 0, 0.35) 0 10px 15px -3px, rgba(0, 0, 0, 0.2) 0 4px 6px -2px;
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
@@ -28,14 +26,36 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+:root.light-mode {
+  --text: #1f2937;
+  --text-h: #0f172a;
+  --bg: #f8fafc;
+  --border: #e2e8f0;
+  --code-bg: #e2e8f0;
+  --accent: #22d3ee;
+  --accent-bg: rgba(56, 189, 248, 0.12);
+  --accent-border: rgba(56, 189, 248, 0.5);
+  --social-bg: rgba(148, 163, 184, 0.3);
+  --shadow: rgba(15, 23, 42, 0.1) 0 10px 15px -3px, rgba(15, 23, 42, 0.05) 0 4px 6px -2px;
+}
+
+:root.dark-mode {
+  --text: #cbd5e1;
+  --text-h: #f8fafc;
+  --bg: #020617;
+  --border: #334155;
+  --code-bg: #0f172a;
+  --accent: #38bdf8;
+  --accent-bg: rgba(56, 189, 248, 0.12);
+  --accent-border: rgba(56, 189, 248, 0.5);
+  --social-bg: rgba(15, 23, 42, 0.75);
+  --shadow: rgba(0, 0, 0, 0.35) 0 10px 15px -3px, rgba(0, 0, 0, 0.2) 0 4px 6px -2px;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light-mode) {
     --text: #9ca3af;
     --text-h: #f3f4f6;
     --bg: #16171d;
@@ -45,8 +65,7 @@
     --accent-bg: rgba(192, 132, 252, 0.15);
     --accent-border: rgba(192, 132, 252, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
 
   #social .button-icon {
@@ -57,9 +76,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 36%),
-    radial-gradient(circle at bottom right, rgba(129, 140, 248, 0.18), transparent 28%),
-    var(--bg);
+  background: var(--bg);
 }
 
 html {
@@ -89,10 +106,45 @@ h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
-  @media (max-width: 1024px) {
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+  h1 {
     font-size: 36px;
     margin: 20px 0;
   }
+  h2 {
+    font-size: 20px;
+  }
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
 }
 h2 {
   font-size: 24px;
