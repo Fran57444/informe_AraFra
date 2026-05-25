@@ -12,14 +12,14 @@ import {
 } from './components/docs'
 
 const sections = [
-  { id: 'resumen', label: 'Resumen', buttonClasses: 'bg-slate-800 text-slate-100 hover:bg-slate-700' },
-  { id: 'marco', label: 'Marco Legal', buttonClasses: 'bg-slate-800 text-slate-100 hover:bg-slate-700' },
-  { id: 'delitos', label: 'Delitos', buttonClasses: 'bg-slate-800 text-slate-100 hover:bg-slate-700' },
-  { id: 'comparacion', label: 'Comparación', buttonClasses: 'bg-slate-800 text-slate-100 hover:bg-slate-700' },
-  { id: 'responsabilidades', label: 'Responsabilidades', buttonClasses: 'bg-slate-800 text-slate-100 hover:bg-slate-700' },
-  { id: 'datos', label: 'Datos', buttonClasses: 'bg-slate-800 text-slate-100 hover:bg-slate-700' },
-  { id: 'conclusiones', label: 'Conclusiones', buttonClasses: 'bg-slate-800 text-slate-100 hover:bg-slate-700' },
-  { id: 'prompts', label: 'Prompts', buttonClasses: 'bg-slate-800 text-slate-100 hover:bg-slate-700' },
+  { id: 'resumen', label: 'Resumen' },
+  { id: 'marco', label: 'Marco Legal' },
+  { id: 'delitos', label: 'Delitos' },
+  { id: 'comparacion', label: 'Comparación' },
+  { id: 'responsabilidades', label: 'Responsabilidades' },
+  { id: 'datos', label: 'Datos' },
+  { id: 'conclusiones', label: 'Conclusiones' },
+  { id: 'prompts', label: 'Prompts' },
 ]
 
 export default function App() {
@@ -95,7 +95,11 @@ export default function App() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className={`rounded-3xl px-4 py-3 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-sky-500/60 ${section.buttonClasses}`}
+                className={`rounded-3xl px-4 py-3 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-sky-500/60 ${
+                  theme === 'dark'
+                    ? 'bg-slate-800 text-slate-100 hover:bg-slate-700'
+                    : 'bg-slate-300 text-slate-900 hover:bg-slate-400'
+                }`}
               >
                 {section.label}
               </a>
@@ -105,46 +109,52 @@ export default function App() {
 
         <main className="grid gap-8">
           <section id="resumen" className="scroll-mt-28">
-            <ResumenArafra />
+            <ResumenArafra theme={theme} />
           </section>
           <section id="marco" className="scroll-mt-28">
-            <MarcoArafra />
+            <MarcoArafra theme={theme} />
           </section>
           <section id="delitos" className="scroll-mt-28">
-            <DelitosArafra />
+            <DelitosArafra theme={theme} />
           </section>
           <section id="comparacion" className="scroll-mt-28">
-            <ComparacionArafra />
+            <ComparacionArafra theme={theme} />
           </section>
           <section id="responsabilidades" className="scroll-mt-28">
-            <ResponsabilidadesArafra />
+            <ResponsabilidadesArafra theme={theme} />
           </section>
           <section id="datos" className="scroll-mt-28">
-            <DatosArafra />
+            <DatosArafra theme={theme} />
           </section>
           <section id="conclusiones" className="scroll-mt-28">
-            <ConclusionesArafra />
+            <ConclusionesArafra theme={theme} />
           </section>
           <section id="prompts" className="scroll-mt-28">
-            <PromptsArafra />
+            <PromptsArafra theme={theme} />
           </section>
         </main>
 
-        <footer className="mt-12 text-center text-slate-500 opacity-70 text-xs leading-6 tracking-[0.16em]">
+        <footer className={`mt-12 text-center opacity-70 text-xs leading-6 tracking-[0.16em] ${
+          theme === 'dark' ? 'text-slate-500' : 'text-slate-600'
+        }`}>
           <p className="font-semibold uppercase">
             Diseñado por:{' '}
             <a
               href="https://github.com/Fran57444"
               target="_blank"
               rel="noreferrer noopener"
-              className="text-slate-300 underline-offset-2 transition hover:text-slate-100 hover:underline"
+              className={`underline-offset-2 transition hover:underline ${
+                theme === 'dark' ? 'text-purple-400 hover:text-purple-300' : 'text-purple-600 hover:text-purple-700'
+              }`}
             >
               Franco Aranguiz
             </a>
           </p>
           <p className="mt-1">INACAP</p>
           <p>Fundamentos de Seguridad de la Información</p>
-          <p className="mt-2 text-[0.65rem] uppercase tracking-[0.35em] text-slate-500 opacity-60">
+          <p className={`mt-2 text-[0.65rem] uppercase tracking-[0.35em] opacity-60 ${
+            theme === 'dark' ? 'text-slate-500' : 'text-slate-600'
+          }`}>
             © 2026 Franco Aranguiz
           </p>
         </footer>
@@ -152,9 +162,11 @@ export default function App() {
         <button
           type="button"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className={`fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-600/80 bg-slate-900/95 text-slate-100 shadow-lg shadow-slate-950/40 transition-opacity duration-300 ${
-            showScrollTop ? 'opacity-100' : 'pointer-events-none opacity-0'
-          }`}
+          className={`fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full border shadow-lg transition-opacity duration-300 ${
+            theme === 'dark'
+              ? 'border-slate-600/80 bg-slate-900/95 text-slate-100 shadow-slate-950/40'
+              : 'border-slate-300/80 bg-slate-200/95 text-slate-700 shadow-slate-200/40'
+          } ${showScrollTop ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
           aria-label="Subir al inicio"
         >
           <ChevronUp className="h-6 w-6" />
