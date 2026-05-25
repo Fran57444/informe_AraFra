@@ -131,9 +131,22 @@ export default function App() {
         </main>
 
         <footer className="mt-12 text-center text-slate-500 opacity-70 text-xs leading-6 tracking-[0.16em]">
-          <p className="font-semibold uppercase">Diseñado por: Franco Aranguiz</p>
+          <p className="font-semibold uppercase">
+            Diseñado por:{' '}
+            <a
+              href="https://github.com/Fran57444"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-slate-300 underline-offset-2 transition hover:text-slate-100 hover:underline"
+            >
+              Franco Aranguiz
+            </a>
+          </p>
           <p className="mt-1">INACAP</p>
           <p>Fundamentos de Seguridad de la Información</p>
+          <p className="mt-2 text-[0.65rem] uppercase tracking-[0.35em] text-slate-500 opacity-60">
+            © 2026 Franco Aranguiz
+          </p>
         </footer>
 
         <button
