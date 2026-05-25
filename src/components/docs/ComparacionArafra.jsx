@@ -1,4 +1,8 @@
-# Comparación de Marcos Regulatorios por Industria
+import React from 'react'
+import ReactMarkdown from 'react-markdown'
+import { Scale } from 'lucide-react'
+
+const markdown = `# Comparación de Marcos Regulatorios por Industria
 
 A continuación, se presenta la tabla comparativa de los marcos regulatorios aplicables ante un incidente de ciberseguridad de la naturaleza de SolarWinds (ataque a la cadena de suministro y espionaje masivo), analizado bajo cuatro ejes fundamentales y su nivel de aplicabilidad.
 
@@ -37,3 +41,19 @@ A continuación, se presenta la tabla comparativa de los marcos regulatorios apl
 1. **Responsabilidad No Delegable (Eje de Terceros):** Los marcos analizados (especialmente el financiero) demuestran que, ante un ataque a la cadena de suministro, la responsabilidad legal frente al regulador permanece en la empresa principal afectada y no en el proveedor externo de software.
 2. **Plazos de Notificación Asimétricos:** Existe una alta exigencia temporal en la fiscalización. Mientras el marco multisectorial de la ANCI otorga un rango de pocas horas, la regulación bancaria (CMF) obliga al reporte técnico en un máximo de 30 minutos desde la detección del incidente.
 3. **Dualidad Punitiva:** Un incumplimiento normativo frente a un ataque como el analizado expone a las organizaciones tanto a multas administrativas institucionales por vía regulatoria sectorial, como a sanciones penales corporativas bajo la Ley N° 20.393.
+`
+export default function ComparacionArafra() {
+  return (
+    <article className="max-w-4xl mx-auto p-7 bg-slate-900/95 border border-slate-700/70 ring-1 ring-slate-700/20 shadow-2xl shadow-slate-950/20 rounded-[1.75rem] transition-all duration-500 hover:-translate-y-1 hover:shadow-slate-950/40 motion-safe:animate-fadeIn">
+      <header className="flex items-center gap-4 mb-4">
+        <div className="p-3 bg-slate-800/80 text-cyan-300 rounded-3xl ring-1 ring-slate-700/70">
+          <Scale className="text-cyan-300" />
+        </div>
+        <h2 className="text-2xl font-semibold">Comparación Regulatoria</h2>
+      </header>
+      <div className="prose prose-invert max-w-none text-slate-100">
+        <ReactMarkdown>{markdown}</ReactMarkdown>
+      </div>
+    </article>
+  )
+}

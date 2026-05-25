@@ -1,0 +1,8 @@
+export { default as ResumenArafra } from './ResumenArafra'
+export { default as MarcoArafra } from './MarcoArafra'
+export { default as DelitosArafra } from './DelitosArafra'
+export { default as ComparacionArafra } from './ComparacionArafra'
+export { default as ResponsabilidadesArafra } from './ResponsabilidadesArafra'
+export { default as DatosArafra } from './DatosArafra'
+export { default as ConclusionesArafra } from './ConclusionesArafra'
+export { default as PromptsArafra } from './PromptsArafra'
