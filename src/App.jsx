@@ -75,7 +75,7 @@ export default function App() {
             <button
               type="button"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className={`relative inline-flex h-11 w-24 items-center rounded-full border border-slate-600/70 px-1 transition ${
+              className={`relative self-center inline-flex h-11 w-24 items-center rounded-full border border-slate-600/70 px-1 transition ${
                 theme === 'dark' ? 'bg-slate-800 text-slate-100' : 'bg-slate-200 text-slate-950'
               }`}
               aria-label="Cambiar tema"
