@@ -1,4 +1,4 @@
-import { FileText, RefreshCcw, AlertCircle } from 'lucide-react'
+import { FileText, RefreshCcw, AlertCircle, Lightbulb } from 'lucide-react'
 import { promptsData } from './afraData'
 
 export default function PromptsArafra({ theme }) {
@@ -71,6 +71,20 @@ export default function PromptsArafra({ theme }) {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className={`mt-8 rounded-3xl border p-6 ${
+        theme === 'dark'
+          ? 'border-slate-700/70 bg-slate-950/80'
+          : 'border-slate-300/70 bg-slate-200/50'
+      }`}>
+        <div className={`flex items-center gap-3 ${theme === 'dark' ? 'text-slate-300' : 'text-slate-700'}`}>
+          <Lightbulb className="h-5 w-5" />
+          <h3 className={`text-xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-slate-950'}`}>Reflexión final</h3>
+        </div>
+        <p className={`mt-5 leading-7 ${theme === 'dark' ? 'text-slate-300' : 'text-slate-700'}`}>
+          La IA como agente se usa para ejecutar tareas de forma más autónoma, tomar decisiones organizadas y gestionar flujos de trabajo. Como chatbot, su función principal es mantener una conversación, responder preguntas y apoyar al usuario en tiempo real.
+        </p>
       </div>
     </article>
   )

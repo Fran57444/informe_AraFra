@@ -29,3 +29,11 @@ Durante el trabajo con la Inteligencia Artificial, se detectó un error importan
 - Error de la IA: El modelo de IA confundió los números de los artículos de la ley chilena de delitos informáticos. Dijo que la interceptación de correos estaba en el artículo 2 y el abuso de dispositivos en el artículo 5.
 - Prompt de corrección del usuario: Entra a esta página de la Biblioteca del Congreso Nacional (https://www.bcn.cl/leychile/navegar?idNorma=1177743), revisa el texto real y corrige lo que me dijiste sobre la ley 21459.
 - Justificación del cambio: La IA estaba entregando información falsa sobre la ley chilena. Al enviarle el enlace oficial, se obligó al modelo a corregir los datos. El resultado correcto quedó así: Artículo 1 (Ataque al sistema), Artículo 2 (Acceso ilícito), Artículo 3 (Interceptación ilícita), Artículo 4 (Ataque a los datos) y Artículo 8 (Abuso de dispositivos).
+
+---
+
+## 3. Reflexión final sobre IA
+
+La IA puede usarse como un agente cuando actúa con cierta autonomía para ejecutar tareas, proponer pasos y gestionar flujos lógicos sin depender únicamente de cada mensaje del usuario. En cambio, como chatbot se centra en la conversación y en responder preguntas, aclarar dudas y acompañar al usuario en tiempo real.
+
+Elegir entre agente y chatbot depende de si necesitas un asistente conversacional o un sistema que realice procesos de forma más proactiva.
